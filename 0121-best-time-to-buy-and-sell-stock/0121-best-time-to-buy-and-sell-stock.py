@@ -6,9 +6,8 @@ class Solution:
            profit=prices[r]-prices[l]
            max_profit=max(max_profit,profit)
            if profit<0:
-               l+=1
-           else:
-               r+=1
+               l=r
+           r+=1
         return max_profit 
            
 
