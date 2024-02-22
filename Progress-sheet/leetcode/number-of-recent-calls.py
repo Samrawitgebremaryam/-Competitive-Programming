@@ -5,14 +5,9 @@ class RecentCounter:
 
     def ping(self, t: int) -> int:
         self.request.append(t)
-        l=0
-        while l<len(self.request):
-            if self.request[l]<t-3000:
-                self.request.popleft()
-            else:
-                break 
-        return len(self.request)
-            
+        while self.request[0]<t-3000:
+            self.request.popleft()
+        return len(self.request) 
    
         
 
