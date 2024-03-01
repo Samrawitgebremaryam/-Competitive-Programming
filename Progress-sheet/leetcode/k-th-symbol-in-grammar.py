@@ -6,7 +6,7 @@ class Solution:
         if k%2==0:
             return parent^1
         else:
-            return parent
+            return parent 
         
        
             
